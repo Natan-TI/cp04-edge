@@ -1,0 +1,511 @@
+[
+    {
+        "id": "b5ae8bde06ad55e0",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8db7893c5c6d56ee",
+        "type": "mqtt in",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "topic": "fiap/iot/1ESR/natan/ultrassonico",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "cfc590c4ab919ddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 260,
+        "wires": [
+            [
+                "31d738ce682f2ef1"
+            ]
+        ]
+    },
+    {
+        "id": "95b8ed4185acf3a6",
+        "type": "mqtt out",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "topic": "fiap/iot/1ESR/natan/ldr",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "cfc590c4ab919ddb",
+        "x": 580,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "31d738ce682f2ef1",
+        "type": "debug",
+        "z": "b5ae8bde06ad55e0",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8d9ab1dbdfa13226",
+        "type": "inject",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "to bem tbm mano!",
+        "payloadType": "str",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "95b8ed4185acf3a6"
+            ]
+        ]
+    },
+    {
+        "id": "592ed07dfd6891dc",
+        "type": "json",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 230,
+        "y": 520,
+        "wires": [
+            [
+                "4dee49d7c5be46e9",
+                "8400e60b31440511",
+                "e1e6ba08185e08d9",
+                "bc7ea879d1cc1c84"
+            ]
+        ]
+    },
+    {
+        "id": "4dee49d7c5be46e9",
+        "type": "change",
+        "z": "b5ae8bde06ad55e0",
+        "name": "distance",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.distancia",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 440,
+        "wires": [
+            [
+                "98f10ba5a5d7e5ba",
+                "518e0d98f304eff8"
+            ]
+        ]
+    },
+    {
+        "id": "8400e60b31440511",
+        "type": "change",
+        "z": "b5ae8bde06ad55e0",
+        "name": "ldr",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.luminosidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "7d375203bb6bea3e",
+                "461d4463a12e1bc8"
+            ]
+        ]
+    },
+    {
+        "id": "e1e6ba08185e08d9",
+        "type": "change",
+        "z": "b5ae8bde06ad55e0",
+        "name": "dhtt11/umidade",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.umidade",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 820,
+        "wires": [
+            [
+                "6425266973c4d317",
+                "69efac40d90d1d47"
+            ]
+        ]
+    },
+    {
+        "id": "98f10ba5a5d7e5ba",
+        "type": "mqtt out",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "topic": "fiap/iot/1ESR/natan/ultrassonico",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "cfc590c4ab919ddb",
+        "x": 730,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7d375203bb6bea3e",
+        "type": "mqtt out",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "topic": "fiap/iot/1ESR/natan/ldr",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "cfc590c4ab919ddb",
+        "x": 680,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6425266973c4d317",
+        "type": "mqtt out",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "topic": "fiap/iot/1ESR/natan/dht11umi",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "cfc590c4ab919ddb",
+        "x": 740,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "bc7ea879d1cc1c84",
+        "type": "change",
+        "z": "b5ae8bde06ad55e0",
+        "name": "dhtt11/temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1000,
+        "wires": [
+            [
+                "8ddaeca73965a419",
+                "18fa279a83ea9282"
+            ]
+        ]
+    },
+    {
+        "id": "8ddaeca73965a419",
+        "type": "mqtt out",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "topic": "fiap/iot/1ESR/natan/dht11temp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "cfc590c4ab919ddb",
+        "x": 770,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "c121db53da7c9983",
+        "type": "serial in",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "serial": "074592a60349ae1d",
+        "x": 50,
+        "y": 520,
+        "wires": [
+            [
+                "592ed07dfd6891dc"
+            ]
+        ]
+    },
+    {
+        "id": "518e0d98f304eff8",
+        "type": "ui_gauge",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "group": "dd055f6f4fdd623e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "diistância",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 660,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "461d4463a12e1bc8",
+        "type": "ui_gauge",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "group": "68824759d0f3388e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Luminosidade",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 660,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "69efac40d90d1d47",
+        "type": "ui_gauge",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "group": "e0e98fab808d9049",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Umidade",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 700,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "18fa279a83ea9282",
+        "type": "ui_gauge",
+        "z": "b5ae8bde06ad55e0",
+        "name": "",
+        "group": "e0e98fab808d9049",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "C°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 710,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "cfc590c4ab919ddb",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt-dashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "074592a60349ae1d",
+        "type": "serial-port",
+        "serialport": "COM5",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "dd055f6f4fdd623e",
+        "type": "ui_group",
+        "name": "Distância",
+        "tab": "7416d8fe687cfd67",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "68824759d0f3388e",
+        "type": "ui_group",
+        "name": "Luminosidade",
+        "tab": "7416d8fe687cfd67",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e0e98fab808d9049",
+        "type": "ui_group",
+        "name": "Umidade e Temperatura",
+        "tab": "7416d8fe687cfd67",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7416d8fe687cfd67",
+        "type": "ui_tab",
+        "name": "CP04 - IOT",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
