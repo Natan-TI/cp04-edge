@@ -1,10 +1,4 @@
 <h1 align="center">Checkpoint 04 - Edge</h1>
-<img src="./arduino1.jpg" width="900px;" alt="Foto do Projeto Arduino"/><br>
-<img src="./arduino2.jpg" width="900px;" alt="Foto do Projeto Arduino"/><br>
-<img src="./arduino3.jpg" width="900px;" alt="Foto do Projeto Arduino"/><br>
-<img src="./dashboard.png" width="900px;" alt="Foto do Projeto Arduino"/><br>
-<img src="./hivemq.png" width="900px;" alt="Foto do Projeto Arduino"/><br>
-<img src="./node-red.png" width="900px;" alt="Foto do Projeto Arduino"/><br>
   
 ## :link: Links
 * Github: https://github.com/Natan-TI/cp04-edge
@@ -121,6 +115,14 @@
     </td>
   </tr>
 </table>
+
+## :camera: Imagens
+<img src="./arduino1.jpg" width="900px;" alt="Foto do Projeto Arduino"/><br>
+<img src="./arduino2.jpg" width="900px;" alt="Foto do Projeto Arduino"/><br>
+<img src="./arduino3.jpg" width="900px;" alt="Foto do Projeto Arduino"/><br>
+<img src="./dashboard.png" width="900px;" alt="Foto do Projeto Arduino"/><br>
+<img src="./hivemq.png" width="900px;" alt="Foto do Projeto Arduino"/><br>
+<img src="./node-red.png" width="900px;" alt="Foto do Projeto Arduino"/><br>
 
 ## :dart: Status do projeto
 Concluido :white_check_mark:
