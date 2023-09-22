@@ -1,4 +1,4 @@
-<h1 align="center">LeafCheck - GS_EDGE</h1>
+<h1 align="center">Checkpoint 04 - Edge</h1>
 <img src="./arduino1.jpg" width="900px;" alt="Foto do Projeto Arduino"/><br>
 <img src="./arduino2.jpg" width="900px;" alt="Foto do Projeto Arduino"/><br>
 <img src="./arduino3.jpg" width="900px;" alt="Foto do Projeto Arduino"/><br>
@@ -7,28 +7,25 @@
 <img src="./node-red.png" width="900px;" alt="Foto do Projeto Arduino"/><br>
   
 ## :link: Links
-* Github: 
-  <br>
-
+* Github: https://github.com/Natan-TI/cp04-edge
 
 ## :memo: Descrição do projeto
 
-* O LeafCheck, oferece uma solução inovadora para os agricultores, detecção e prevenção de doenças de plantas por meio de modelos de IA e aprendizado de máquina, com diagnósticos precisos, orientações de tratamento personalizadas e integração de informações climáticas e geográficas, os agricultores podem agir de forma proativa, detectando precocemente doenças e tomando medidas corretivas adequadas.
+* Checkpoint 04 - Edge Computing and Computer Systems
   <br>
+* Desafio: Utilizar 3 sensores no Arduino Uno R3, transformar os dados obtidos em JSON, passar os dados para o Node-Red, e do Node-Red para o MQTT. Ao final, fazer um dashboard com todos os dados que estão sendo recebidos.
 
 ## :books: Funcionalidades
 
-* <b>Sensor de umidade</b>: Detecta a umidade do solo
+* <b>Sensor de umidade</b>: Detecta a umidade.
   <br>
-* <b>Sensor de temperatura</b>: Detecta temperatura ambiente
+* <b>Sensor de temperatura</b>: Detecta temperatura ambiente.
   <br>
-* <b>Sensor de movimento</b>: Detecta se há ervas daninha no solo
+* <b>Sensor Ultrassônico</b>: Detecta distância.
   <br>
-* <b>Sensor de PH do solo</b>: Detecta se o nivel de PH do solo está aceitavel
+* <b>Sensor LDR</b>: Detecta a luminosidade no local.
   <br>
-* <b>Sensor de luminosidade</b>: Alem de detectar a luminosidade, faz com que o motor abra e feche de acordo com a luminosidade do local, se etiver muito alto ele ativa o motor, se estiver baixa ele é desativado.
-  <br>
-* <b>Display LCD</b>: Informa os resultados dos sensores de forma prética e direta
+* <b>Dashboard</b>: Dashboard que mostra os dados dos sensores.
 
 ## :seedling: Instruções de uso
 
@@ -39,6 +36,12 @@
 * Fazer as devidas conexões dos sensores, fios e resistores no Arduino Uno R3
   <br>
 * Rodar o programa
+  <br>
+* Adicionar o flow ao node-red
+  <br>
+* Fazer a conexão ao node-red
+  <br>
+* Adicionar os tópicos no HiveMQ
 
 ## :clipboard: Requisitos
 
@@ -46,26 +49,30 @@
   <br>
 * IDE Arduino
   <br>
-* 2 Potenciômetros
+* 1 Sensor DHT11
   <br>
-* 1 Sensor de temperatura
+* 1 Sensor Ultrassônico
   <br>
-* 1 Sensor PIR
+* 1 Sensor LDR
   <br>
-* 1 Fotorresistor
+* Node-red
   <br>
-* 1 Micro servo
+* HiveMQ
   <br>
-* 1 Display LCD 16x2
-  <br>
-* 2 Resistores de 10KΩ
+* 1 Resistor de 10KΩ
   <br>
 * Ligação ao computador
 
 ## :hammer: Dependências
-* Biblioteca Servo para funcionamento do Servo Motor
+* Biblioteca ArduinoJson.h na IDE Arduino
   <br>
-* Biblioteca LiquidCrystal para funcionamento do Display LCD
+* Biblioteca DHT sensor library na IDE Arduino
+  <br>
+* Instalação do Node-red
+  <br>
+* Biblioteca node-red-serial-port no node-red
+  <br>
+* Biblioteca node-red-dashboard no node-red
 
 
 ## :wrench: Tecnologias utilizadas
@@ -74,17 +81,17 @@
   <br>
 * C++;
   <br>
-* Display lcd;
+* Display LDR;
   <br>
-* Potenciometro;
+* Sensor Ultrassônico;
   <br>
-* Sensor de temperatura;
+* Sensor DHT11;
   <br>
-* Sensor PIR;
+* Node.js;
   <br>
-* Fotorresistor;
+* Node-red;
   <br>
-* Micro servo;
+* HiveMQ;
 
 
 ## :handshake: Colaboradores
